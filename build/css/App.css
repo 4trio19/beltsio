@@ -2,3 +2,11 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.form-group {
+  margin-right: 20px;
+}
+
+.form-group label {
+  width: 100px;
+}
