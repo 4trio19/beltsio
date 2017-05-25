@@ -49,13 +49,14 @@ class BeltForm extends Component {
                 <input className="add-belt-input" name="qty" ref="qty" type="number" value={this.state.qty} onChange={this.updateInputValue}/>
                 </div>
                 <div className="form-group">
-                  <label>Width:</label>
-                <input className="add-belt-input" name="width" ref="width" type="number" value={this.state.width} onChange={this.updateInputValue}/>
-                </div>
-                <div className="form-group">
                   <label>Length:</label>
                 <input className="add-belt-input" name="length" ref="length" type="number" value={this.state.length} onChange={this.updateInputValue}/>
                 </div>
+                <div className="form-group">
+                  <label>Width:</label>
+                <input className="add-belt-input" name="width" ref="width" type="number" value={this.state.width} onChange={this.updateInputValue}/>
+                </div>
+
                 <div className="form-group">
                   <label>Thickness:</label>
                 <input className="add-belt-input" name="thickness" ref="thickness" type="number" value={this.state.thickness} onChange={this.updateInputValue}/>

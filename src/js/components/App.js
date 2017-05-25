@@ -9,8 +9,9 @@ class App extends Component {
       <div className="App container">
         <div className="row">
         <Header />
-
+        <div className="container">
         <BeltList />
+        </div>
       </div>
     </div>
     );
