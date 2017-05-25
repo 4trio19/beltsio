@@ -36,7 +36,7 @@ class BeltList extends Component {
             <th>Material</th>
             <th>Machine</th>
             <th>Num</th>
-            <th>Remove</th>
+            <th className="col-md-1 text-center">X</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@ class BeltList extends Component {
             <td>{belt.length} x {belt.width} x {belt.thickness}</td>
             <td>{belt.machine}</td>
             <td>{belt.num}</td>
-            <td><button className="btn btn-warning" onClick= {() => this._removeBelt(belt.id)}>X Remove</button></td>
+            <td className="col-md-1 text-center"><button className="btn btn-warning" onClick= {() => this._removeBelt(belt.id)}><i className="fa fa-trash" aria-hidden="true"></i></button></td>
           </tr>
         )
       })}
