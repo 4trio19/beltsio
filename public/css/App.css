@@ -10,3 +10,16 @@
 .form-group label {
   width: 100px;
 }
+
+#belt-form {
+  width: 100%;
+  max-width: 280px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group input {
+  width: 100%;
+}
