@@ -69,7 +69,7 @@ class BeltForm extends Component {
                   <label>Num:</label>
                 <input className="add-belt-input" name="num" ref="num" type="number" value={this.state.num} onChange={this.updateInputValue}/>
                 </div>
-                <div className="form-group">
+                <div className="form-group text-right">
                 <button type="submit" className="btn btn-success">Add Belt</button>
                 </div>
             </form>
