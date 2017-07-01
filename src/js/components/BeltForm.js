@@ -10,8 +10,7 @@ class BeltForm extends Component {
             'length': 0,
             'width': 0,
             'thickness': 0,
-            'machine': '',
-            'num': 0
+            'machine': ''
         }
         this.updateInputValue = this.updateInputValue.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,22 +20,19 @@ class BeltForm extends Component {
         const target = e.target;
         const value = target.value;
         const name = target.name;
-        const id = belts.length + 1;
-        console.log(this.state);
-        this.setState({[name]: value, id: id});
+        this.setState({[name]: value});
 
     }
     handleSubmit(e) {
         e.preventDefault();
         this.props.handleSubmit(this.state);
         this.setState({
-            'id': 0,
+            'id': this.state.id+1,
             'qty': 0,
             'length': 0,
             'width': 0,
             'thickness': 0,
-            'machine': '',
-            'num': 0
+            'machine': ''
         });
     }
     render() {
@@ -56,18 +52,13 @@ class BeltForm extends Component {
                   <label>Width:</label>
                 <input className="add-belt-input" name="width" ref="width" type="number" value={this.state.width} onChange={this.updateInputValue}/>
                 </div>
-
                 <div className="form-group">
                   <label>Thickness:</label>
                 <input className="add-belt-input" name="thickness" ref="thickness" type="number" value={this.state.thickness} onChange={this.updateInputValue}/>
                 </div>
                 <div className="form-group">
                   <label>Machine:</label>
-                <input className="add-belt-input" placeholder="ex: Vega 1100" name="machine" ref="machine" type="text" value={this.state.machine} onChange={this.updateInputValue}/>
-                </div>
-                <div className="form-group">
-                  <label>Num:</label>
-                <input className="add-belt-input" name="num" ref="num" type="number" value={this.state.num} onChange={this.updateInputValue}/>
+                <input className="add-belt-input" placeholder="ex: Vega 1100 #11" name="machine" ref="machine" type="text" value={this.state.machine} onChange={this.updateInputValue}/>
                 </div>
                 <div className="form-group text-right">
                 <button type="submit" className="btn btn-success">Add Belt</button>
